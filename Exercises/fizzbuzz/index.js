@@ -12,6 +12,21 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+  for (let i = 1; i < n; i++) {
+    let divisibleByThree = i % 3 === 0;
+    let divisibleByFive = i % 5 === 0;
+
+    if (divisibleByThree && divisibleByFive) {
+      console.log("FizzBuzz");
+    } else if (divisibleByThree) {
+      console.log("Fizz");
+    } else if (divisibleByFive) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
 
 module.exports = fizzBuzz;
